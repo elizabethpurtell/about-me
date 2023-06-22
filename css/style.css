@@ -1,6 +1,10 @@
 body {
-  background: rgb(136,243,255);
-  background: linear-gradient(176deg, rgba(136,243,255,1) 0%, rgba(169,255,226,1) 51%, rgba(113,0,255,1) 100%);
+  background: rgb(207,242,174);
+  background: linear-gradient(176deg, rgba(207,242,174,1) 0%, rgba(148,255,233,1) 46%, rgba(223,202,250,1) 100%);
+}
+header {
+  display: inline;
+  border: #464646;
 }
 main {
   display: block;
@@ -8,14 +12,6 @@ main {
   border-color: #464646;
   margin-left: 400px;
   margin-right: 400px;
-}
-#introBio {
-  list-style-type:circle;
-  color: #464646;
-  font-size: medium;
-  padding-bottom: 8px;
-  margin-left: 0px;
-  margin-right: 0px;
 }
 
 section {
@@ -25,11 +21,18 @@ section {
   border-style:hidden;
   margin: 40px;
 }
+section > p {
+  padding-left: 100px;
+  padding-right: 100px;
+}
 h1 {
   text-align: center;
   font-size: 2.5vw;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #464646;
+  margin: 20px;
+  background-color: white;
+  padding: 20px;
   margin: 20px;
 }
 h2 {
@@ -51,6 +54,16 @@ h3 {
   padding: 20px;
   margin: 20px;
 }
+h6 {
+  text-align: center;
+  font-size: .75vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  background-color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  padding: 20px;
+  margin: 20px;
+}
 p {
   font-size: 1dvw;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -67,10 +80,14 @@ ul {
   color: #464646;
 }
 li {
-  list-style-type:circle;
+  list-style-type:disc;
   color: #464646;
   font-size: medium;
+  line-height: 1.25dvw;
   padding-bottom: 8px;
   margin-left: 60px;
   margin-right: 100px;
+}
+footer > section {
+  display: inline;
 }
