@@ -8,8 +8,8 @@ This website is built to practice my JavaScript skills, User Stories and more.
 
 ### Links and Resources
 
-* [submission PR](http://xyz.com)
-* Any Links you used as reference
+* [CSS Gradient Maker](https://cssgradient.io/)
+* [CSS Cheatsheet](https://overapi.com/css)
 
 ### Lighthouse Accessibility Report Score
 
