@@ -13,7 +13,8 @@ This website is built to practice my JavaScript skills, User Stories and more.
 
 ### Lighthouse Accessibility Report Score
 
-![Lighthouse Report][def]
+![Lighthouse Report Lab02][def]
+![Lighthouse Report Lab03](img/lighthouse-lab03.png)
 
 ### Reflections and Comments
 
