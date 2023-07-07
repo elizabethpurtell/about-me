@@ -97,13 +97,12 @@ while (maxGuesses > 0 && correctGuess === false) {
     questionSix = prompt('Guess is too high, try again!');
   }
   maxGuesses--;
+  // if maxGuesses is reached, then return a alert that they are out of chances along with the answer.
+  if (maxGuesses === 0) {
+    alert(`You've run out of guesses. The actual answer was ${timesWatchedSW}`);
+  }
 }
 
-// if maxGuesses is reached, then return a alert that they are out of chances along with the actual number
-
-if (maxGuesses === 0) {
-  alert(`You've run out of guesses. The actual answer was ${timesWatchedSW}`);
-}
 
 // Question 7:
 // Add a 7th question that has multiple possible correct answers that are stored in an array.
@@ -113,38 +112,40 @@ if (maxGuesses === 0) {
 
 let userQuestion = 'What is my favorite color?';
 let favColors = ['blue', 'teal', 'periwinkle', 'cornflower'];
+let attempts = 6;
+let correct = false;
 
-for (let attempts = 6; attempts > 0; attempts--) {
+while (attempts && correct === false) {
   let favColorGuess = prompt(userQuestion);
-
+  attempts--;
 
   for (let i = 0; i < favColors.length; i++) {
+    // console.log(favColorGuess, '===', favColors[i]);
     if (favColorGuess === favColors[i]) {
       alert('Great job guessing my favorite color!!');
       counterCorrect += 1; // this counter will add all the correct answers
+      correct = true;
       attempts = 0;
       break;
     }
-    for (let i = 0; i < favColors.length; i++) {
-      if (favColorGuess !== favColors[i]) {
-        alert('Wrong, Try again!');
-        prompt('What is my favorite color?');
-        attempts = 0;
-        // } else if(prompt('What is my favorite color?)){
-
-      }
-    }
   }
-  // need to use this alert if they didn't guess any correct colors. If all attempts are used but no correct answer then:
-  alert(`Here are all my favorite colors: ${favColors}`);
-}
+  // 'if' added to make the user return to the while loop to recheck, user gets 2 messages, then back to prompt to answer the question.
+  if (correct === false) {
+    alert('Wrong, Try again!');
+    alert(`You have ${attempts} attempts remaining`);
+  }
+} // completes the while loop for question7
+
+// Display all the possible correct answers to the user.
+alert(`Here are all my favorite colors: ${favColors}`);
+
 
 // Display the data received from the counterCorrect with an alert to the user about how many answers were correct.
 alert(`Fabulous! ${userName}, you answered ${counterCorrect} out of 7 correctly!`);
+
 // console.log(`Fabulous! ${userName}, you answered ${counterCorrect} out of 7 correctly!`);
 
 // Display users name back to them in a final message
-
 // console.log(`Thank you for answering my questions ${userName}! Please have a look-see through my About Me page to learn more about me!`);
 
 alert(`Thank you for answering my questions ${userName}! Please have a look-see through my About Me page to learn more about me!`);
