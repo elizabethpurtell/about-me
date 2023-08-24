@@ -1,12 +1,7 @@
 'use strict';
 
-// function greeting() { *this blocks the userName from being defined and I lose alerts at the end. What should I do to fix this?
-
 let userName = prompt('What is your name?');
 alert(`Welcome to my site ${userName}! Let's play a guessing game, please answer yes/no OR y/n`);
-
-// }
-// greeting();
 
 let counterCorrect = 0;
 
@@ -130,7 +125,7 @@ function seventhQuestion() {
     }
     if (correct === false) {
       alert(`Wrong, Try again! You have ${attempts} attempts remaining`);
-      // alert(`You have ${attempts} attempts remaining`);
+
     }
   }
 
